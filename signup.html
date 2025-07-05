@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - AMTECH-Farms Benin</title>
+    <link rel="stylesheet" href="css/auth-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="auth-container">
+        <form class="auth-form">
+            <h2>Create Your AMTECH Account</h2>
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Create a password" required />
+            </div>
+
+            <button type="submit" class="btn primary">Sign Up</button>
+
+            <div class="divider">or</div>
+
+            <div class="social-login">
+                <button class="btn google"><i class="fab fa-google"></i> Sign up with Google</button>
+                <button class="btn facebook"><i class="fab fa-facebook-f"></i> Sign up with Facebook</button>
+            </div>
+
+            <p class="auth-switch">
+                Already have an account? <a href="/login.html">Login</a>
+            </p>
+        </form>
+    </div>
+    <script>
+        const auth = firebase.auth();
+
+        document.querySelector(".google").addEventListener("click", () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            auth.signInWithPopup(provider)
+                .then(result => {
+                    // Redirect or show welcome message
+                    window.location.href = "/dashboard.html";
+                })
+                .catch(error => {
+                    alert("Google login failed: " + error.message);
+                });
+        });
+
+        document.querySelector(".facebook").addEventListener("click", () => {
+            const provider = new firebase.auth.FacebookAuthProvider();
+            auth.signInWithPopup(provider)
+                .then(result => {
+                    // Redirect or show welcome message
+                    window.location.href = "/dashboard.html";
+                })
+                .catch(error => {
+                    alert("Facebook login failed: " + error.message);
+                });
+        });
+    </script>
+</body>
+
+</html>

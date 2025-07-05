@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AMTECH-Farms Benin | Black Soldier Fly Farming</title>
+    <!-- Include your existing CSS links here -->
+    <!-- font awesome links -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- font awesome links -->
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- bootrap links -->
+    <style>
+        /* Additional styling for About page */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/BSF\ Pupae\ and\ Adult\ flies.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .mission-card,
+        .vision-card {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-card {
+            background-color: #f8f9fa;
+            border-top: 5px solid #28a745;
+        }
+
+        .vision-card {
+            background-color: #f8f9fa;
+            border-top: 5px solid #17a2b8;
+        }
+
+        .team-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #28a745;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid #28a745;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #f8f9fa;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #f8f9fa;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #f8f9fa;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #f8f9fa transparent transparent;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #f8f9fa;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid #f8f9fa;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #f8f9fa transparent transparent;
+            }
+
+            .left::after,
+            .right::after {
+                left: 18px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include your existing header/navigation here -->
+    <!-- top navbar -->
+    <div class="top-navbar">
+        <a class="navbar-brand" href="/index.html"><img src="img/BSF on white background.jpg"
+                alt="black soldief flies in Benin republic" width="180px">BSF Farms Benin</a>
+        <!-- <div class="top-icons">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </div> -->
+        <div data-i18n="updates" class="ticker-wrapper text-dark py-2"
+            style="background-color: rgba(243, 243, 202, 0.3);">
+            <marquee behavior="scroll" direction="left" scrollamount="5" class="small">
+                🚀 Fresh Black Soldier Flies larvae available daily! &nbsp;&nbsp; 🌱 New organic feed line launching
+                soon! &nbsp;&nbsp;
+                📦 Palm kernel Nuts, Palm Kernel Oil and Palm Kernel Cake are available every thursday, Book Now!
+                &nbsp;&nbsp; 🐛 Bulk discount on orders above 1tonne!
+            </marquee>
+        </div>
+        <div class="other-links">
+            <!-- <button id="btn-login"><a href="/login.html">Login</a></button>
+                <button id="btn-sign-up"><a href="/signup.html">SignUp</a></button> -->
+
+            <!-- <i class="fa-solid fa-bell" id="bell-icon"></i> -->
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <!-- <a href="/payment.html"><i class="fa-solid fa-shopping-cart" aria-hidden="true"></i></a> -->
+        </div>
+    </div>
+
+    <!-- top navbar -->
+
+
+
+    <div class="about-hero">
+        <div>
+            <h1>About AMTECH-Farms Benin</h1>
+            <p class="lead">Pioneering sustainable agriculture through Black Soldier Fly technology</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Our Story</h2>
+                <p>Founded in 2020, AMTECH-Farms Benin began as a small-scale initiative to address the growing need
+                    for
+                    sustainable fruits sources in West Africa's livestock industry. Now, what started as an experimental
+                    BSF
+                    farm has grown into Benin's leading producer of high-quality Black Soldier Fly larvae and
+                    related
+                    agricultural products.</p>
+                <p>Today, we operate a state-of-the-art insect farming facility that converts organic waste into
+                    valuable animal feed, helping farmers reduce costs while promoting environmental sustainability.
+                </p>
+
+                <!-- <img src="img/" alt="BSF farming process" class="img-fluid rounded my-3"> -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <iframe class="embed-responsive-item" src="/img/Palm kernel factory asmr.mp4"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2>Why Black Soldier Flies?</h2>
+                <p>Black Soldier Fly larvae (BSFL) represent the future of sustainable animal nutrition:</p>
+                <ul>
+                    <li><strong>High Protein Content:</strong> 40-60% protein, ideal for poultry, fish and livestock
+                    </li>
+                    <li><strong>Eco-Friendly:</strong> Reduces organic waste by up to 70% in just 15 days</li>
+                    <li><strong>Cost Effective:</strong> Up to 30% cheaper than conventional feed options</li>
+                    <li><strong>Natural:</strong> No antibiotics or growth hormones</li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/gjYO_PDA-LE"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mission-vision">
+            <div class="mission-card">
+                <h3><i class="fas fa-bullseye mr-2"></i>Our Mission</h3>
+                <p>To revolutionize West Africa's agricultural sector through innovative insect-based solutions that
+                    promote food security, environmental sustainability, and economic empowerment for local farmers.
+                </p>
+            </div>
+            <div class="vision-card">
+                <h3><i class="fas fa-eye mr-2"></i>Our Vision</h3>
+                <p>To become the leading provider of sustainable animal nutrition solutions in West Africa by 2030,
+                    reducing reliance on imported feed while creating a circular economy around organic waste.</p>
+            </div>
+        </div>
+
+        <h2 class="text-center my-5">Our Core Values</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rounded-circle bg-light d-inline-block">
+                    <i class="fas fa-leaf fa-3x text-success"></i>
+                </div>
+                <h4>Sustainability</h4>
+                <p>We prioritize eco-friendly practices in all our operations</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rounded-circle bg-light d-inline-block">
+                    <i class="fas fa-flask fa-3x text-primary"></i>
+                </div>
+                <h4>Innovation</h4>
+                <p>Continuous research to improve our products and processes</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rounded-circle bg-light d-inline-block">
+                    <i class="fas fa-hands-helping fa-3x text-warning"></i>
+                </div>
+                <h4>Community</h4>
+                <p>Empowering local farmers through training and support</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rounded-circle bg-light d-inline-block">
+                    <i class="fas fa-medal fa-3x text-danger"></i>
+                </div>
+                <h4>Quality</h4>
+                <p>Rigorous standards for all our products</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Meet Our Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/Professional Picture.png" alt="CEO">
+                        <h4>Mike O. Alabi Mike</h4>
+                        <p>Founder & CEO</p>
+                        <p>Scientist with 10+ years in sustainable farming</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/team/operations.jpg" alt="Operations Manager">
+                        <h4>Fatou Diallo</h4>
+                        <p>Operations Manager</p>
+                        <p>Specialist in insect farming systems</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/team/research.jpg" alt="Research Lead">
+                        <h4>Dr. Kwame Mensah</h4>
+                        <p>Research Lead</p>
+                        <p>PhD in Entomology with focus on BSFL nutrition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-5">Our Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2020</h3>
+                    <p>Founded AMTECH-Farms with small pilot facility in Abomey-Calavi</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2021</h3>
+                    <p>First commercial batch of BSFL sold to local poultry farmers</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2022</h3>
+                    <p>Expanded operations to include organic compost production</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2023</h3>
+                    <p>Launched farmer training programs across Benin</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>2024</h3>
+                    <p>Opened new 5,000 sqm facility with increased production capacity</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>2025</h3>
+                    <p>Began exporting to neighboring countries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Join Our Sustainable Agriculture Movement</h2>
+            <p class="lead mb-4">Whether you're a farmer, investor, or sustainability advocate, we'd love to connect
+            </p>
+            <a href="contact-us.html" class="btn btn-primary btn-lg mr-3">Contact Us</a>
+            <a href="order-bsf-larvae.html" class="btn btn-success btn-lg">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Include your existing footer here -->
+    <footer id="footer" style="margin-top: 50px;">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 md-6 footer-content">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="/about-us.html">About Us</a></li>
+                            <li><a href="">Our Services</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Affiliated Programmes </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 md-6 footer-content">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="/contact-us.html">Contact Us</a></li>
+                            <li><a href="">Help Desk</a></li>
+                            <li><a href="">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 md-6 footer-content">
+                        <h3>Account</h3>
+                        <ul>
+                            <li><a href="">My Account</a></li>
+                            <li><a href="">Order History</a></li>
+                            <li><a href="">Wishlist</a></li>
+                            <li><a href="">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 md-6 footer-content">
+                        <h3>Social Media</h3>
+                        <ul>
+                            <li><i class="fa-brands fa-facebook" aria-hidden="true"></i> <a href="">Facebook</a></li>
+                            <li><i class="fa-brands fa-twitter" aria-hidden="true"></i> <a
+                                    href="https://x.com/@amtechbenin">Twitter</a></li>
+                            <li> <i class="fa-brands fa-instagram" aria-hidden="true"></i> <a
+                                    href="https://www.instagram.com/amtechbenin/">Instagram</a></li>
+                            <li><i class="fa-brands fa-youtube" aria-hidden="true"></i> <a
+                                    href="https://www.youtube.com/amtechbenin">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <p class="copyright">&copy; 2025 <a href="/index.html">AMTECH BSF Farms Benin</a>. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+
+    <!-- End of product cards -->
+
+
+    <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    includedLanguages: 'en,fr',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('fr')) {
+            setTimeout(() => {
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = "fr";
+                    select.dispatchEvent(new Event("change"));
+                }
+            }, 2000); // Wait for the widget to load
+        }
+    </script>
+
+</body>
+
+</html>
