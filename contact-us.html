@@ -176,24 +176,17 @@
 
 <body>
     <!-- Include your existing header/navigation here -->
-    <!-- top navigation -->
-    <!-- top navbar -->
     <div class="top-navbar">
-        <a class="navbar-brand" href="/index.html"><img src="img/BSF on white background.jpg"
-                alt="black soldief flies in Benin republic" width="180px">BSF Farms Benin</a>
-        <div class="top-icons">
-            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-        </div>
-        <div class="other-links">
-            <!-- <button id="btn-login"><a href="/login.html">Login</a></button>
-                    <button id="btn-sign-up"><a href="/signup.html">SignUp</a></button> -->
-
-            <!-- <i class="fa-solid fa-bell" id="bell-icon"></i> -->
-            <!-- <i class="fa-solid fa-user"></i> -->
-            <!-- <a href="/payment.html"><i class="fa-solid fa-shopping-cart" aria-hidden="true"></i></a> -->
+        <a class="navbar-brand" href="/index.html"><img src="img/bsf-farm-benin logo.jpg"
+                alt="black soldier flies in Benin republic" width="180px"></a>
+        <div data-i18n="updates" class="ticker-wrapper text-dark py-2"
+            style="background-color: rgba(243, 243, 202, 0.3);">
+            <marquee behavior="scroll" direction="left" scrollamount="5" class="small">
+                🚀 Fresh Black Soldier Flies larvae available daily! &nbsp;&nbsp; 🌱 New organic feed line launching
+                soon! &nbsp;&nbsp;
+                📦 Palm kernel, Palm Kernel Oil and Palm Kernel Cake are available every thursday, Book Now!
+                &nbsp;&nbsp; 🐛 Bulk discount on orders above 1tonne!
+            </marquee>
         </div>
     </div>
 
@@ -227,7 +220,7 @@
                 <a href="/about-us.html" class="nav-link">About Us</a>
             </li>
         </ul>
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" netlify>
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" id="search-btn" type="submit">Search</button>
         </form>
@@ -310,13 +303,13 @@
                 </div>
             </div>
 
-            <div class="contact-form">
+            <div class="contact-form" netlify>
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and our team will respond within 24 hours</p>
 
-                <form id="contactForm" action="/php/send_email.php" method="POST">
+                <form id="contactForm" action="/php/send_email.php" method="POST" netlify>
                     <div class="form-group">
-                        <label for="name">Full Name*</label>
+                        <label for="name">First and Last Name*</label>
                         <input type="text" id="name" name="name" class="form-control" required>
                     </div>
 
