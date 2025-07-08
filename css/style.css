@@ -196,10 +196,10 @@ body {
 
 /* navbar */
 #navbar {
-    background-color:rgb(142, 204, 248);
+    background-color:rgb(185, 114, 67);
     font-size:16px;
     font-family: 'Roboto Slab', serif;
-    /* font-weight: 500; */
+    font-weight: 500px;
 }
 
 
@@ -266,6 +266,9 @@ marquee {
     background-color:#f7d4bb;
 }
 /* END of NAVIGATION BAR */
+
+
+
 
 /* ===== MODERN HERO SECTION ===== */
 .hero-section {
@@ -756,9 +759,15 @@ marquee {
     gap: 8px;
 }
 
-.add-to-cart:hover {
+.add-to-cart a {
+    text-decoration: none;
+    color: white;
+}
+
+.add-to-cart a:hover {
     background: var(--secondary-color);
     transform: translateY(-2px);
+    color: rgb(161, 197, 63);
 }
 
 .wishlist-btn {
@@ -1031,6 +1040,113 @@ marquee {
 }
 
 /* offer */
+
+/* ultimate offers */
+/* ===== ULTIMATE OFFER STYLES ===== */
+:root {
+    --brand-primary: #410606; /* Your brand color */
+    --brand-secondary: #ff6b6b; /* Complementary accent */
+}
+
+.offer-section {
+    max-width: 1400px;
+    margin: 70px auto;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+}
+
+.countdown-timer span {
+    background: rgba(65,6,6,0.1);
+    padding: 5px 8px;
+    border-radius: 4px;
+    min-width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Rating Badges */
+.rating-badge {
+    background: rgba(75, 192, 192, 0.1);
+    color: #4bc0c0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 10px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating-badge span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Expand/Collapse Feature */
+.expand-btn {
+    background: transparent;
+    border: none;
+    color: var(--brand-primary);
+    font-weight: 600;
+    margin-top: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s;
+}
+
+.expand-btn:hover {
+    color: var(--brand-secondary);
+}
+
+.expand-btn::after {
+    content: "+";
+    font-weight: bold;
+}
+
+.expand-btn[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.expand-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.expand-content p {
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Dynamic Brand Colors */
+.offer-card {
+    border-top: 3px solid var(--brand-color, var(--brand-primary));
+}
+
+/* End of Dynamic Brand Colors */
+
+
+
 
 
 /* footer */
