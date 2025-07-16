@@ -1,0 +1,22 @@
+<!-- email-template.html -->
+<h1>New Quote Request: {product_name}</h1>
+<img src="{product_image_url}" alt="{product_name}" width="300">
+<h2>Customer Details</h2>
+<p><strong>Name:</strong> {customer_name}</p>
+<p><strong>Email:</strong> {customer_email}</p>
+<p><strong>Phone:</strong> {customer_phone}</p>
+<p><strong>WeChat:</strong> {customer_wechat}</p>
+<p><strong>Address:</strong> {customer_address}, {customer_city}, {customer_state}, {customer_country}</p>
+
+<h2>Requested Items</h2>
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    {items_html}
+</table>
+
+<p><strong>Total Amount:</strong> {total_amount} CFA</p>
+<p><strong>Date Submitted:</strong> {submission_date}</p>
