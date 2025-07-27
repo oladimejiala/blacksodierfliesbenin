@@ -142,6 +142,81 @@
                 flex-direction: column;
             }
         }
+
+        /* Zoho form styling to match existing design */
+        #crmWebToEntityForm {
+            background-color: transparent;
+            max-width: 100%;
+            padding: 0;
+        }
+
+        #crmWebToEntityForm .zcwf_title {
+            display: none;
+        }
+
+        #crmWebToEntityForm .zcwf_row {
+            margin: 15px 0;
+        }
+
+        #crmWebToEntityForm .zcwf_col_lab {
+            width: 100%;
+            float: none;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        #crmWebToEntityForm .zcwf_col_fld {
+            width: 100%;
+            float: none;
+        }
+
+        #crmWebToEntityForm input[type="text"],
+        #crmWebToEntityForm input[type="email"],
+        #crmWebToEntityForm input[type="tel"],
+        #crmWebToEntityForm textarea,
+        #crmWebToEntityForm select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+        }
+
+        #crmWebToEntityForm textarea {
+            min-height: 150px;
+        }
+
+        #crmWebToEntityForm .formsubmit {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #crmWebToEntityForm .formsubmit:hover {
+            background-color: #218838;
+        }
+
+        #crmWebToEntityForm input[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+
+        #crmWebToEntityForm input[type="reset"]:hover {
+            background-color: #5a6268;
+        }
     </style>
     <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 9999;"></div>
 
@@ -303,46 +378,105 @@
                 </div>
             </div>
 
-            <div class="contact-form" netlify>
+            <div class="contact-form">
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and our team will respond within 24 hours</p>
 
-                <form id="contactForm" action="/php/send_email.php" method="POST" netlify>
-                    <div class="form-group">
-                        <label for="name">First and Last Name*</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
+                <!-- Zoho CRM Form - Integrated with existing styling -->
+                <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
+                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                    <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
+                    <form id='webform6409684000001107030' action='https://crm.zoho.com/crm/WebToLeadForm'
+                        name='WebToLeads6409684000001107030' method='POST'
+                        onSubmit='javascript:document.charset="UTF-8"; return checkMandatory6409684000001107030()'
+                        accept-charset='UTF-8'>
+                        <input type='text' style='display:none;' name='xnQsjsdp'
+                            value='79818452cece69486d5332f428ff2edc2848f456fc46ee614d0940881a02e113'></input>
+                        <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+                        <input type='text' style='display:none;' name='xmIwtLD'
+                            value='e7fd9b4d2ba08fd286f52b05629bc300099a4d34a273edbb246eb99dd6576f8e3def307e8fff7ee652f03a6238106858'></input>
+                        <input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
+                        <input type='text' style='display:none;' name='returnURL'
+                            value='https&#x3a;&#x2f;&#x2f;blacksoldierfliesbenin.netlify.app&#x2f;contact-us'></input>
+                        <!-- Do not remove this code. -->
+                        <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'></input>
+                        <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'></input>
+                        <!-- Do not remove this code. -->
 
-                    <div class="form-group">
-                        <label for="email">Email Address*</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
+                        <div class='form-group'>
+                            <label for='Company'>Company <span style='color:red;'>*</span></label>
+                            <input type='text' id='Company' name='Company' class='form-control' aria-required='true'
+                                maxlength='200'>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" class="form-control">
-                    </div>
+                        <div class='form-group'>
+                            <label for='First_Name'>First Name</label>
+                            <input type='text' id='First_Name' name='First Name' class='form-control'
+                                aria-required='false' maxlength='40'>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="subject">Subject*</label>
-                        <select id="subject" name="subject" class="form-control" required>
-                            <option value="">Select a subject</option>
-                            <option value="product-inquiry">Product Inquiry</option>
-                            <option value="bulk-order">Bulk Order Request</option>
-                            <option value="farm-visit">Schedule Farm Visit</option>
-                            <option value="partnership">Partnership Opportunity</option>
-                            <option value="technical-support">Technical Support</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                        <div class='form-group'>
+                            <label for='Last_Name'>Last Name <span style='color:red;'>*</span></label>
+                            <input type='text' id='Last_Name' name='Last Name' class='form-control' aria-required='true'
+                                maxlength='80'>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">Your Message*</label>
-                        <textarea id="message" name="message" class="form-control" required></textarea>
-                    </div>
+                        <div class='form-group'>
+                            <label for='Email'>Email</label>
+                            <input type='email' id='Email' name='Email' class='form-control' aria-required='false'
+                                maxlength='100'>
+                        </div>
 
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+                        <div class='form-group'>
+                            <label for='Mobile'>Mobile</label>
+                            <input type='tel' id='Mobile' name='Mobile' class='form-control' aria-required='false'
+                                maxlength='30'>
+                        </div>
+
+                        <div class='form-group'>
+                            <label for='Country'>Country</label>
+                            <input type='text' id='Country' name='Country' class='form-control' aria-required='false'
+                                maxlength='100'>
+                        </div>
+
+                        <div class='form-group wfrm_fld_dpNn'>
+                            <label for='Lead_Source'>Lead Source</label>
+                            <select id='Lead_Source' name='Lead Source' class='form-control'
+                                onChange='addAriaSelected6409684000001107030()'>
+                                <option value='-None-'>-None-</option>
+                                <option value='Advertisement'>Advertisement</option>
+                                <option value='Cold&#x20;Call'>Cold Call</option>
+                                <option value='Employee&#x20;Referral'>Employee Referral</option>
+                                <option value='External&#x20;Referral'>External Referral</option>
+                                <option value='Online&#x20;Store'>Online Store</option>
+                                <option value='X&#x20;&#x28;Twitter&#x29;'>X (Twitter)</option>
+                                <option value='Facebook'>Facebook</option>
+                                <option value='Partner'>Partner</option>
+                                <option value='Public&#x20;Relations'>Public Relations</option>
+                                <option value='Sales&#x20;Email&#x20;Alias'>Sales Email Alias</option>
+                                <option value='Seminar&#x20;Partner'>Seminar Partner</option>
+                                <option value='Internal&#x20;Seminar'>Internal Seminar</option>
+                                <option value='Trade&#x20;Show'>Trade Show</option>
+                                <option value='Web&#x20;Download'>Web Download</option>
+                                <option selected value='Web&#x20;Research'>Web Research</option>
+                                <option value='Chat'>Chat</option>
+                            </select>
+                        </div>
+
+                        <div class='form-group'>
+                            <label for='Description'>Description</label>
+                            <textarea id='Description' name='Description' class='form-control'
+                                aria-required='false'></textarea>
+                        </div>
+
+                        <input type='text' type='hidden' style='display: none;' name='aG9uZXlwb3Q' value='' />
+
+                        <div class='form-group'>
+                            <button type='submit' id='formsubmit' class='submit-btn'>Submit</button>
+                            <button type='reset' class='submit-btn' style="background-color: #6c757d;">Reset</button>
+                        </div>
+                    </form>
+                </div>
 
                 <div class="business-hours">
                     <h3>Customer Support Hours</h3>
@@ -382,26 +516,143 @@
         </div>
     </div>
 
-    <!-- Include your existing footer here -->
-
     <script>
-        // Form validation script
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            if (!name || !email || !subject || !message) {
-                e.preventDefault();
-                alert('Please fill in all required fields marked with *');
+        function addAriaSelected6409684000001107030() {
+            var optionElem = event.target;
+            var previousSelectedOption = optionElem.querySelector('[aria-selected=true]');
+            if (previousSelectedOption) {
+                previousSelectedOption.removeAttribute('aria-selected');
+            }
+            optionElem.querySelectorAll('option')[optionElem.selectedIndex].ariaSelected = 'true';
+        }
+        function validateEmail6409684000001107030() {
+            var form = document.forms['WebToLeads6409684000001107030'];
+            var emailFld = form.querySelectorAll('[ftype=email]');
+            var i;
+            for (i = 0; i < emailFld.length; i++) {
+                var emailVal = emailFld[i].value;
+                if ((emailVal.replace(/^\s+|\s+$/g, '')).length != 0) {
+                    var atpos = emailVal.indexOf('@');
+                    var dotpos = emailVal.lastIndexOf('.');
+                    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+                        alert('Please enter a valid email address. ');
+                        emailFld[i].focus();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        function checkMandatory6409684000001107030() {
+            var mndFileds = new Array('Company', 'Last Name');
+            var fldLangVal = new Array('Company', 'Last\x20Name');
+            for (i = 0; i < mndFileds.length; i++) {
+                var fieldObj = document.forms['WebToLeads6409684000001107030'][mndFileds[i]];
+                if (fieldObj) {
+                    if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                        if (fieldObj.type == 'file') {
+                            alert('Please select a file to upload.');
+                            fieldObj.focus();
+                            return false;
+                        }
+                        alert(fldLangVal[i] + ' cannot be empty.');
+                        fieldObj.focus();
+                        return false;
+                    }
+                    else if (fieldObj.nodeName == 'SELECT') {
+                        if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+                            alert(fldLangVal[i] + ' cannot be none.');
+                            fieldObj.focus();
+                            return false;
+                        }
+                    }
+                    else if (fieldObj.type == 'checkbox') {
+                        if (fieldObj.checked == false) {
+                            alert('Please accept  ' + fldLangVal[i]);
+                            fieldObj.focus();
+                            return false;
+                        }
+                    }
+                    try {
+                        if (fieldObj.name == 'Last Name') {
+                            name = fieldObj.value;
+                        }
+                    }
+                    catch (e) { }
+                }
+            }
+            trackVisitor6409684000001107030();
+            if (!validateEmail6409684000001107030()) {
                 return false;
             }
-
-            // You can add additional validation here
-            return true;
-        });
+            var urlparams = new URLSearchParams(window.location.search);
+            if (urlparams.has('service') && (urlparams.get('service') === 'smarturl')) {
+                var webform = document.getElementById('webform6409684000001107030');
+                var service = urlparams.get('service');
+                var smarturlfield = document.createElement('input');
+                smarturlfield.setAttribute('type', 'hidden');
+                smarturlfield.setAttribute('value', service);
+                smarturlfield.setAttribute('name', 'service');
+                webform.appendChild(smarturlfield);
+            }
+            document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+        }
+        function tooltipShow6409684000001107030(el) {
+            var tooltip = el.nextElementSibling;
+            var tooltipDisplay = tooltip.style.display;
+            if (tooltipDisplay == 'none') {
+                var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                for (i = 0; i < allTooltip.length; i++) {
+                    allTooltip[i].style.display = 'none';
+                }
+                tooltip.style.display = 'block';
+            }
+            else {
+                tooltip.style.display = 'none';
+            }
+        }
     </script>
+    <script type='text/javascript' id='VisitorTracking'>
+        var $zoho = $zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: 'siq957a716812af0011e30ad74fad5203387aef1f97b3038ce5dd1c11502c300de7',
+            values: {},
+            ready: function () { }
+        };
+        var d = document;
+        s = d.createElement('script');
+        s.type = 'text/javascript';
+        s.id = 'zsiqscript';
+        s.defer = true;
+        s.src = 'https://salesiq.zoho.com/widget';
+        t = d.getElementsByTagName('script')[0];
+        t.parentNode.insertBefore(s, t);
+        function trackVisitor6409684000001107030() {
+            try {
+                if ($zoho) {
+                    var LDTuvidObj = document.forms['WebToLeads6409684000001107030']['LDTuvid'];
+                    if (LDTuvidObj) {
+                        LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
+                    }
+                    var firstnameObj = document.forms['WebToLeads6409684000001107030']['First Name'];
+                    if (firstnameObj) {
+                        name = firstnameObj.value + ' ' + name;
+                    }
+                    $zoho.salesiq.visitor.name(name);
+                    var emailObj = document.forms['WebToLeads6409684000001107030']['Email'];
+                    if (emailObj) {
+                        email = emailObj.value;
+                        $zoho.salesiq.visitor.email(email);
+                    }
+                }
+            }
+            catch (e) { }
+        }
+    </script>
+    <!-- Do not remove this --- Analytics Tracking code starts -->
+    <script id='wf_anal'
+        src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=cdd5347b62a0a5b1a3845fe8c0f94c135da24b9be682568c87d75df3c09dcb09be8287caaedf83afeaef2c83104737dbgid0009c08b94a965345181ea38760694cad572ab4ad596b4e4733218c6c59d0b1agida1e59a86855e8a53043fc808c34ab31931b92842bea0b6ccae3f22f4e761d891gid939ae66f8311f7202501a1d87b96c52a3221d632699fc69292394d4d26e3d8c3&tw=19ec3fdc572dc7012939acfc4fa6ae274be97166815327a1761fae830b4625a4'></script>
+    <!-- Do not remove this --- Analytics Tracking code ends. -->
 </body>
 
 </html>
